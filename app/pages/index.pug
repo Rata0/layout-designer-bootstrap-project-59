@@ -33,8 +33,12 @@ html(lang="ru")
                     p.item-text.d-xl-block.mb-0 Профиль
           <!--  Блок Контакты -->
           .row
-            .col-12.px-4.pt-5 
-              p Контакты
+            .col-12
+              form.form-search.sticky-top.bg-white.px-4.pt-5
+                .h2.fw-bold.mb-4 Контакты
+                label.form-label.d-none(for="search")
+                input.form-control.shadow-none.border-0.border-bottom.p-4#search(type="text" placeholder=`Поиск по контактам`)
+
         .col-8.d-none.d-sm-block
           .h-100.d-flex.flex-column.justify-content-center.align-items-center
             img.rounded-circle.mb-3(src='assets/images/avatar_1.jpg' width="200" height="200")
