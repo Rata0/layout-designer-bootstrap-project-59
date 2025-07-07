@@ -9,11 +9,34 @@ html(lang="ru")
     .container-xxl.rounded-3.overflow-hidden.h-100
       .row.h-100.bg-white
         .col-12.col-sm-4.border-end
+          <!--  Блок Навбар -->
           .row.bg-primary
             .col-12
-            p Nav
+              div.navbar.navbar-expand.order-last.order-sm-first.d-flex.justify-content-between.bg-primary.px-3.py-4 
+                svg(width="25" height="40")
+                  use(xlink:href="assets/icons/sprite.svg#logo")
+
+                nav.navbar-nav.flex-row.flex-wrap.justify-content-around.gap-xl-3.gap-4
+                  a.nav-item.d-flex.gap-2.px-2(href="#contacts")
+                    svg(width="25" height="25")
+                      use(xlink:href="assets/icons/sprite.svg#people")
+                    p.item-text.d-xl-block Контакты
+
+                  a.nav-item.d-flex.gap-2.px-2(href="#chats")
+                    svg(width="25" height="25")
+                      use(xlink:href="assets/icons/sprite.svg#chat")
+                    p.item-text.d-xl-block Сообщения
+
+                  a.nav-item.d-flex.gap-2.px-2(href="#profile")
+                    svg(width="25" height="25")
+                      use(xlink:href="assets/icons/sprite.svg#person")
+                    p.item-text.d-xl-block Профиль
+
           .row
             .col-12.px-4.pt-5 
               p Contact
         .col-8.d-none.d-sm-block
-          p Chat
+          .h-100.d-flex.flex-column.justify-content-center.align-items-center
+            img.rounded-circle.mb-3(src='assets/images/avatar_1.jpg' width="200" height="200")
+            h6.lh-base.fw-bold.m-0 Привет, Кодовёнок
+            p.small.text-muted.m-0 Выбери чат, чтобы начать общаться
