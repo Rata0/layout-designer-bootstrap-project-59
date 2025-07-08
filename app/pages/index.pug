@@ -39,6 +39,9 @@ html(lang="ru")
                 label.form-label.d-none(for="search")
                 input.form-control.shadow-none.border-0.border-bottom.p-4#search(type="text" placeholder=`Поиск по контактам`)
 
+            .position-relative.overflow-hidden.h-100
+              include components/contacts.pug
+
         .col-8.d-none.d-sm-block
           .h-100.d-flex.flex-column.justify-content-center.align-items-center
             img.rounded-circle.mb-3(src='assets/images/avatar_1.jpg' width="200" height="200")

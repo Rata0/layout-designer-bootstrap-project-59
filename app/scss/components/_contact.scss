@@ -1,0 +1,21 @@
+@import '../utilities/mixins';
+
+.tab {
+  @include hide-scrollbar;
+  height: 100%;
+  
+}
+
+.contact-card {  
+  &:hover {
+    background-color: var(--bs-primary);
+  
+    h6 {
+      color: var(--bs-light);
+    }
+    
+    p {
+      color: var(--bs-gray);
+    }
+  }
+}
