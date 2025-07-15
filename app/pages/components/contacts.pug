@@ -43,9 +43,10 @@ mixin contact-card(name, status, avatar)
       h6.mb-0.fw-bold= name
       p.small.mb-0= status
 
-.tab.position-relative.h-100
-  .mt-5.px-4
-    each users, letter in contacts
-      p.text-uppercase.text-muted.mb-3.fw-bold= letter
-      each user in users
-        +contact-card(user.name, user.status, user.avatar)
+.contacts-container.flex-grow-1.overflow-hidden
+  .contacts-content.overflow-y-auto.h-100
+    .mt-5.px-4.pb-5
+      each users, letter in contacts
+        p.text-uppercase.text-muted.mb-3.fw-bold= letter
+        each user in users
+          +contact-card(user.name, user.status, user.avatar)

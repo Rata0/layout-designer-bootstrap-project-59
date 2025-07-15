@@ -1,9 +1,17 @@
 @import '../utilities/mixins';
 
-.tab {
+.contacts-container {
+  position: relative;
+}
+
+.contacts-content {
   @include hide-scrollbar;
-  height: 100%;
   
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
 
 .contact-card {  
@@ -15,7 +23,7 @@
     }
     
     p {
-      color: var(--bs-gray);
+      color: var(--bs-gray-300);
     }
   }
 }

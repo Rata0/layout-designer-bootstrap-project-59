@@ -8,39 +8,21 @@ html(lang="ru")
   body.bg-gray.vh-100.p-sm-4
     .container-xxl.rounded-3.overflow-hidden.h-100
       .row.h-100.bg-white
-        .col-12.col-sm-4.border-end
-          <!--  Блок Навбар -->
+        .col-12.col-sm-4.border-end.d-flex.flex-column
+          <!-- Блок Навбар -->
           .row.bg-primary
             .col-12
-              nav.navbar.navbar-expand.order-last.order-sm-first.d-flex.justify-content-between.bg-primary.px-3.py-4
-                svg.svg-logo(width="25" height="40")
-                  use(xlink:href="assets/icons/sprite.svg#logo")
-
-                nav.navbar-nav.flex-row.flex-wrap.justify-content-around.gap-xl-3.gap-4
-                  a.nav-link.link-light.d-flex.align-items-center.gap-2.px-2(href="#contacts")
-                    svg(width="25" height="25")
-                      use(xlink:href="assets/icons/sprite.svg#people")
-                    p.item-text.d-xl-block.mb-0 Контакты
-
-                  a.nav-link.link-light.d-flex.align-items-center.gap-2.px-2(href="#chats")
-                    svg(width="25" height="25")
-                      use(xlink:href="assets/icons/sprite.svg#chat")
-                    p.item-text.d-xl-block.mb-0 Сообщения
-
-                  a.nav-link.link-light.d-flex.align-items-center.gap-2.px-2(href="#profile")
-                    svg(width="25" height="25")
-                      use(xlink:href="assets/icons/sprite.svg#person")
-                    p.item-text.d-xl-block.mb-0 Профиль
-          <!--  Блок Контакты -->
-          .row
-            .col-12
+              include components/navbar.pug
+          
+          <!-- Блок Контакты -->
+          .flex-grow-1.d-flex.flex-column.overflow-hidden
+            .bg-white
               form.form-search.sticky-top.bg-white.px-4.pt-5
                 .h2.fw-bold.mb-4 Контакты
                 label.form-label.d-none(for="search")
-                input.form-control.shadow-none.border-0.border-bottom.p-4#search(type="text" placeholder=`Поиск по контактам`)
-
-            .position-relative.overflow-hidden.h-100
-              include components/contacts.pug
+                input.form-control.shadow-none.border-0.border-bottom.p-4#search(type="text" placeholder=`Поиск по контактам`) 
+            
+            include components/contacts.pug
 
         .col-8.d-none.d-sm-block
           .h-100.d-flex.flex-column.justify-content-center.align-items-center
